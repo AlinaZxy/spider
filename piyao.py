@@ -31,6 +31,9 @@ driver = webdriver.Chrome(chrome_options=chrome_options,
 driver.get(main_page_url)
 time.sleep(1)
 
+for i in range(3):
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight); var lenOfPage=document.body.scrollHeight; return lenOfPage;")
+    time.sleep(3)
 
 dates=driver.find_elements_by_xpath('//div[@class="day_date"]')
 for date in dates:
