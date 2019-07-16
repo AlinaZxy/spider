@@ -27,6 +27,7 @@ chrome_options.add_argument('--disable-gou')
 driver = webdriver.Chrome(chrome_options=chrome_options,
                                 executable_path=chrome_driver_path)
 
+
 driver.get(main_page_url)
 time.sleep(1)
 
@@ -42,4 +43,4 @@ for date in dates:
         print(i.text)
 
 
-    quit()
+quit()
