@@ -42,6 +42,4 @@ for date in dates:
         print(i.text)
 
 
-    
-
-quit()
+    quit()
