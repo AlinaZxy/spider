@@ -29,11 +29,19 @@ driver = webdriver.Chrome(chrome_options=chrome_options,
 
 driver.get(main_page_url)
 time.sleep(1)
-#driver.quit()
-titles=driver.find_elements_by_xpath('//div[@class="left_title"]')
-nums=driver.find_elements_by_xpath('//div[@class="comment_text"]')
-for t in titles:
-    print(t.text)
 
+
+dates=driver.find_elements_by_xpath('//div[@class="day_date"]')
+for date in dates:
+    print(date.text)
+    titles=driver.find_elements_by_xpath('//div[@class="left_title"]')
+    nums=driver.find_elements_by_xpath('//div[@class="comment_text"]')
+    for t in titles:
+        print(t.text)
+    for i in nums:
+        print(i.text)
+
+
+    
 
 quit()
